@@ -1,24 +1,24 @@
-#include "tasha.h"
+#include "main.h"
+
 /**
- * *_strncat - function that concatenates two string
- * @dest: pointer destination
- * @src: pointer of bytes
- * @n: number of byte to receive
- * Return: void
+ * _strcat - concatenates the string pointed to by @src to
+ * the end of the string pointed to by @dest
+ * @dest: string that will be appended
+ * @src: string to be concatenated upon
+ *
+ * Return: returns poiner to @dest
  */
-char *_strncat(char *dest, char *src, int n)
+
+char *_strcat(char *dest, char *src)
 {
-	int dest_len, i;
 
-	for (dest_len = 0; dest[dest_len] != '\0';)
-	         dest_len++;
+	int index = 0, dest_len = 0;
 
-	for (i = 0; i < n && src[i] != '\0';)
- 	        i++;
-	dest[dest_len + i] = src[i];
+	while (dest[index++])
+		dest_len++;
 
-        /*should end with a end of string char*/
-	dest[dest_len + i] = '\0';
+	for (index = 0; src[index]; index++)
+		dest[dest_len++] = src[index];
 
 	return (dest);
-}		
+}
