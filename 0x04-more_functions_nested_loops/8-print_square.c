@@ -1,34 +1,28 @@
 #include "main.h"
+
 /**
- * print_diagonal - prints diagonal line
- * @n: print int
- * Return: Always 0.
+ * print_square - prints a square
+ * @size: square size
+ *
+ * Return: nothing on success
  */
-void print_diagonal(int n)
+void print_square(int size)
 {
+	int count = 0, start;
 
-int i;
-int b;
-
-if (n > 0)
-{
-for (i = 0; i < n; i++)
-{
-for (b = 0; b < i; b++)
-{
-_putchar (' ');
-}
-_putchar (92);
-_putchar ('\n');
-
-}
-
-}
-
-
-else
-{
-_putchar ('\n');
-}
-
+	if (size <= 0)
+		_putchar('\n');
+	else
+	{
+		for (start = 0; start < size; start++)
+		{
+			while (count < size)
+			{
+				_putchar('#');
+				count++;
+			}
+			count = 0;
+			_putchar('\n');
+		}
+	}
 }
