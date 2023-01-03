@@ -1,47 +1,26 @@
 #include <stdio.h>
-/**
- * main - entry point
- *
- * Return: void
- */
 
+/**
+ * main - Fizz-Buzz test
+ *
+ * Return: 0 on success
+ */
 int main(void)
 {
+	int start = 1, end = 100;
 
-int p = 100;
-int i;
+	while (start <= 100)
+	{
+		if (start % 3 == 0)
+			printf("Fizz");
+		if (start % 5 == 0)
+			printf("Buzz");
+		if (start % 3 != 0 && start % 5 != 0)
+			printf("%d", start);
 
-i = 1;
-while (1 <= p )
-{
-if (i % 3 == 0 && i % 5 == 0)
-{
-printf("FizzBuzz ");
-}
+		putchar(start == end ? '\n' : ' ');
+		start++;
+	}
 
-else if (i % 3 == 0)
-{
-printf("Fizz ");
-}
-
-else if (i % 5 == 0)
-{
-if (i < p)
-printf("Buzz ");
-
-else 
-printf("Buzz");
-}
-
-else
-{
-printf("%i ", i);
-}
-
-i++;
-
-
-}
-printf("\n");
-return (0);
+	return (0);
 }
