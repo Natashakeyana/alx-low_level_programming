@@ -8,7 +8,6 @@
  *
  * Return: returns poiner to @dest
  */
-
 char *_strcat(char *dest, char *src)
 {
 
